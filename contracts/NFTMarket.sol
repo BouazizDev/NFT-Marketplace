@@ -1,4 +1,3 @@
-// contracts/Market.sol
 // SPDX-License-Identifier: MIT OR Apache-2.0
 pragma solidity ^0.8.3;
 
@@ -46,7 +45,7 @@ contract NFTMarket is ReentrancyGuard {
   function getListingPrice() public view returns (uint256) {
     return listingPrice;
   }
-
+  
   /* Places an item for sale on the marketplace */
   function createMarketItem(
     address nftContract,
@@ -58,7 +57,7 @@ contract NFTMarket is ReentrancyGuard {
 
     _itemIds.increment();
     uint256 itemId = _itemIds.current();
-
+  
     idToMarketItem[itemId] =  MarketItem(
       itemId,
       nftContract,
@@ -118,7 +117,7 @@ contract NFTMarket is ReentrancyGuard {
     return items;
   }
 
-  /* Returns only items that a user has purchased */
+  /* Returns onlyl items that a user has purchased */
   function fetchMyNFTs() public view returns (MarketItem[] memory) {
     uint totalItemCount = _itemIds.current();
     uint itemCount = 0;
