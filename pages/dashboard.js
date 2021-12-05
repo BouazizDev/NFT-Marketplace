@@ -49,7 +49,7 @@ export default function CreatorDashboard() {
         return(
             <div>
                 <div className="p-4">
-                <h2 className="text-2xl py-2"> Les Objets Crées</h2>
+                <h2 className="text-2xl py-2"> Created Items</h2>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
                         {
@@ -57,7 +57,7 @@ export default function CreatorDashboard() {
                                 <div key={i} className="border shadow rounded-xl overflow-hidden">
                                 <img src={nft.image} className="rounded"/>
                                 <div className="p-4 bg-black">
-                                    <p className="text-2xl font-bold text-white"> Prix - {nft.price} Eth</p>
+                                    <p className="text-2xl font-bold text-white"> Price - {nft.price} Eth</p>
                                 </div>
                             </div>
     
@@ -68,14 +68,14 @@ export default function CreatorDashboard() {
                         {
                             Boolean(sold.length) && (
                                 <div>
-                                <h2 className="text-2xl py-2"> Les Objets vendus</h2>
+                                <h2 className="text-2xl py-2">Sold Item</h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 pt-4">
                                         {
                                     nfts.map((nft,i)=>(
                                         <div key={i} className="border shadow rounded-xl overflow-hidden">
                                         <img src={nft.image} className="rounded"/>
-                                        <div className="p-4 bg-black">
-                                            <p className="text-2xl font-bold text-white"> Prix - {nft.price} Eth</p>
+                                        <div className="p-4 bg-green">
+                                            <p className="text-2xl font-bold text-white"> Price - {nft.price} Eth</p>
                                         </div>
                                     </div>
             

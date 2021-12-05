@@ -76,17 +76,17 @@ export default function CreateItem() {
     <div className="flex justify-center">
       <div className="w-1/2 flex flex-col pb-12">
         <input 
-          placeholder="Nom de l'objet"
+          placeholder="Item Name"
           className="mt-8 border rounded p-4"
           onChange={e => updateFormInput({ ...formInput, name: e.target.value })}
         />
         <textarea
-          placeholder="Description de l'objet"
+          placeholder="Item Description"
           className="mt-2 border rounded p-4"
           onChange={e => updateFormInput({ ...formInput, description: e.target.value })}
         />
         <input
-          placeholder="Prix de l'objet en Eth"
+          placeholder="Price :Eth"
           className="mt-2 border rounded p-4"
           onChange={e => updateFormInput({ ...formInput, price: e.target.value })}
         />
@@ -98,11 +98,11 @@ export default function CreateItem() {
         />
         {
           fileUrl && (
-            <img className="rounded mt-4" width="350" src={fileUrl} />
+            <img className="rounded mt-4" width="300" src={fileUrl} />
           )
         }
-        <button onClick={createMarket} className="font-bold mt-4 bg-blue-500 text-white rounded p-4 shadow-lg">
-          Creer l'objet
+        <button onClick={createMarket} className="font-bold mt-2 bg-blue-600 text-white rounded p-4 shadow-lg">
+          Create Item
         </button>
       </div>
     </div>
